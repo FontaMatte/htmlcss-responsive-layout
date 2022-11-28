@@ -90,7 +90,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -99,12 +99,43 @@ body {
     max-width: 450px;
 }
 
+.button {
+    background-color:var(--bg-blue);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.button.white  {
+    background-color: white;
+    color: black;
+}
+
+.button.blue {
+    background-color:var(--bg-blue);
+    color: white;
+}
+
+.button.purple.download {
+    background-color: #9792e4;
+    border-radius: 50%;
+    padding: 0.5rem;
+    color: black;
+}
+
+.button.purple.more {
+    background-color: #9792e4;
+}
 /* REGOLE HEADER */
 header {
+    width: 100%;
     background-color: var(--bg-blue);
-    /* position: fixed;
+    position: fixed;
     top: 0;
-    left: 0; */
+    left: 0;
+    z-index: 10;
 }
 
 .header-container {
@@ -112,39 +143,76 @@ header {
     justify-content: space-between;
 }
 
+.menu nav ul {
+    text-decoration: none;
+
+}
+
+.menu nav ul li {
+    display: inline-block;
+    padding: 1.2rem 0.3rem;
+}
+
+.menu nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.header-container .logo {
+    padding: 0.4rem 0;
+}
+
 /* REGOLE MAIN */
 
 /* regole intro  */
 #intro {
-    padding: 2rem 0;
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
 }
 
 #intro .cards-container {
     justify-content: space-between;
     flex-wrap:wrap;
     margin:0 -0.75rem;
+    color: var(--color-blue);
 }
 
 #intro .cards-container .card {
     width: calc((100% / 3) - 1.5rem);
-    height: 100px;
     background-color: #b5ddff;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
-    border: 1px dashed black;
+    border-radius: 10px;
+    padding: 1rem;
 }
 
 .cards-container .card-big {
     width: calc(((100% / 3) * 2) - 1.5rem);
-    height: 100px;
     background-color: #b5ddff;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
-    border: 1px dashed black;
+    border-radius: 20px;
 }
 
 .card-big + .card {
     margin-bottom: 1rem;
+}
+
+.cards-container .card-big-image img {
+    width: 60%;
+}
+
+.card-big-text .button {
+    text-decoration: none;
+}
+
+.card-big-text {
+    padding: 1rem;
+}
+
+.card > p{
+    color: black;
 }
 
 /* regole planning */
@@ -157,17 +225,34 @@ header {
     padding: 2rem;
 }
 
-#planning .left-row {
+#planning .left-column {
     width: 50%;
-    height: 300px;
-    border: 1px dashed black;
+    padding: 2rem;
 }
 
-#planning .right-row {
+#planning .right-column {
     width: 50%;
-    height: 300px;
-    border: 1px dashed black;
+    padding: 2rem;
 }
+
+#planning .left-column img {
+    width: 100%;
+}
+
+#planning .left-column > * {
+    color: white;
+}
+
+#planning .right-column img {
+    width: 50%;
+}
+
+.right-column-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
 
 /* regole testimonials */
 #testimonials {
@@ -175,20 +260,23 @@ header {
 }
 
 .review {
-    height: 150px;
     background-color: #9792e4;
     margin: 1.5rem 0;
 }
 
 .review-photo {
     width: 30%;
-    border: 1px dashed black;
+}
+
+.review img {
+    width: 100%;
 }
 
 /* regole benefit */
 #benefit {
     padding: 2rem 0;
     background-color: #9792e4;
+    color: white;
 }
 
 #benefit .benefit-container {
@@ -198,12 +286,13 @@ header {
 
 .benefit-container .benefit {
     width: calc((100% / 3) - 1.5rem);
-    height: 150px;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     background-color: white;
-    border: 1px dashed black;
+    color: #9792e4;
     margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 /* regole about us */
@@ -243,10 +332,19 @@ footer {
     .container {
         max-width: 750px;
     }
+
+    .menu {
+        display: none;
+    }
 }
+
 /* TABLET TO DESKTOP */
 @media screen and (min-widht: 768px ) {
     .container {
         max-width: 1000px;
+    }
+
+    .menu {
+        display: none;
     }
 }
