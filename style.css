@@ -80,6 +80,10 @@ body {
     margin-bottom: 50px;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 :root {
     --bg-blue:#0084FD;
     --color-blue: #0084fd;
@@ -91,9 +95,16 @@ body {
     padding: 0 2rem;
 }
 
+.container-small {
+    max-width: 450px;
+}
+
 /* REGOLE HEADER */
 header {
     background-color: var(--bg-blue);
+    /* position: fixed;
+    top: 0;
+    left: 0; */
 }
 
 .header-container {
@@ -102,10 +113,127 @@ header {
 }
 
 /* REGOLE MAIN */
+
+/* regole intro  */
+#intro {
+    padding: 2rem 0;
+}
+
 #intro .cards-container {
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
+    margin:0 -0.75rem;
 }
+
+#intro .cards-container .card {
+    width: calc((100% / 3) - 1.5rem);
+    height: 100px;
+    background-color: #b5ddff;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    border: 1px dashed black;
+}
+
+.cards-container .card-big {
+    width: calc(((100% / 3) * 2) - 1.5rem);
+    height: 100px;
+    background-color: #b5ddff;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    border: 1px dashed black;
+}
+
+.card-big + .card {
+    margin-bottom: 1rem;
+}
+
+/* regole planning */
+#planning {
+    background-color: #9792e4;
+}
+
+#planning .planning-container {
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+#planning .left-row {
+    width: 50%;
+    height: 300px;
+    border: 1px dashed black;
+}
+
+#planning .right-row {
+    width: 50%;
+    height: 300px;
+    border: 1px dashed black;
+}
+
+/* regole testimonials */
+#testimonials {
+    padding: 2rem 0;
+}
+
+.review {
+    height: 150px;
+    background-color: #9792e4;
+    margin: 1.5rem 0;
+}
+
+.review-photo {
+    width: 30%;
+    border: 1px dashed black;
+}
+
+/* regole benefit */
+#benefit {
+    padding: 2rem 0;
+    background-color: #9792e4;
+}
+
+#benefit .benefit-container {
+    flex-wrap: wrap;
+    margin: 0 -0.75rem;
+}
+
+.benefit-container .benefit {
+    width: calc((100% / 3) - 1.5rem);
+    height: 150px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    background-color: white;
+    border: 1px dashed black;
+    margin-top: 1rem;
+}
+
+/* regole about us */
+#about .about-container {
+    padding: 2rem;
+}
+
+.about-container .left-column {
+    width: 80%;
+    height: 300px;
+    border: 1px dashed black;
+}
+
+.about-container .right-column {
+    width: 20%;
+    height: 300px;
+    border: 1px dashed black;
+}
+
+/* regole get started */
+#get-started {
+    background-color: #9792e4;
+    height: 400px;
+}
+
+footer {
+    background-color:#333333 ;
+    height: 200px;
+}
+
 
 
 
