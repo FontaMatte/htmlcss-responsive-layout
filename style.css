@@ -1,0 +1,124 @@
+/* REGOLE DI RESET  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REGOLE GENERALI */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.flex {
+    display: flex;
+}
+
+.container1000 {
+    max-width: 1000px;
+    margin:0 auto;
+}
+
+.container1100 {
+    max-width: 1100px;
+    margin:0 auto;
+}
+
+.container1200 {
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+
+.inline-block {
+    display: inline-block;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+:root {
+    --bg-blue:#0084FD;
+    --color-blue: #0084fd;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* REGOLE HEADER */
+header {
+    background-color: var(--bg-blue);
+}
+
+.header-container {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* REGOLE MAIN */
+#intro .cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+/* MEDIA QUERY */
+/* MOBILE TO TABLE */
+@media screen and (min-widht: 480px ) {
+    .container {
+        max-width: 750px;
+    }
+}
+/* TABLET TO DESKTOP */
+@media screen and (min-widht: 768px ) {
+    .container {
+        max-width: 1000px;
+    }
+}
