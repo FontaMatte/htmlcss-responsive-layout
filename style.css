@@ -10,12 +10,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.clearfix::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .flex {
     display: flex;
 }
@@ -85,12 +79,14 @@ body {
 }
 
 :root {
-    --bg-blue:#0084FD;
+    --bg-blue: #0084FD;
     --color-blue: #0084fd;
+    --bg-purple:  #9792e4;
+    --color-purple: #9792e4;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -113,20 +109,15 @@ body {
     color: black;
 }
 
-.button.blue {
-    background-color:var(--bg-blue);
-    color: white;
-}
-
 .button.purple.download {
-    background-color: #9792e4;
+    background-color:var(--bg-purple);
     border-radius: 50%;
     padding: 0.5rem;
     color: black;
 }
 
 .button.purple.more {
-    background-color: #9792e4;
+    background-color: var(--bg-purple);
 }
 /* REGOLE HEADER */
 header {
@@ -143,17 +134,21 @@ header {
     justify-content: space-between;
 }
 
-.menu nav ul {
+.menu-desktop {
+    display: none;
+}
+
+.menu-desktop nav ul {
     text-decoration: none;
 
 }
 
-.menu nav ul li {
+.menu-desktop nav ul li {
     display: inline-block;
     padding: 1.2rem 0.3rem;
 }
 
-.menu nav ul li a {
+.menu-desktop nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
@@ -161,6 +156,10 @@ header {
 
 .header-container .logo {
     padding: 0.4rem 0;
+}
+
+.header-container .menu-mobile {
+    color: white;
 }
 
 /* REGOLE MAIN */
@@ -181,58 +180,52 @@ header {
 #intro .cards-container .card {
     width: calc((100% / 3) - 1.5rem);
     background-color: #b5ddff;
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-    border-radius: 10px;
-    padding: 1rem;
-}
-
-.cards-container .card-big {
-    width: calc(((100% / 3) * 2) - 1.5rem);
-    background-color: #b5ddff;
+    margin-bottom: 1.5rem;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     border-radius: 20px;
-}
-
-.card-big + .card {
-    margin-bottom: 1rem;
-}
-
-.cards-container .card-big-image img {
-    width: 60%;
-}
-
-.card-big-text .button {
-    text-decoration: none;
-}
-
-.card-big-text {
     padding: 1rem;
 }
 
-.card > p{
+#intro .cards-container .card:first-child {
+    width: calc(((100% / 3) * 2) - 1.5rem);
+    justify-content: center;
+}
+
+#intro .cards-container .card:first-child > * {
+    width: 50%;
+}
+
+.cards-container .card .card-big-image img {
+    width: 60%;
+}
+
+.card .card-big-text {
+    padding: 1rem;
+}
+
+.card  p {
     color: black;
 }
 
 /* regole planning */
 #planning {
-    background-color: #9792e4;
+    background-color:var(--bg-purple);
+    padding: 2rem 0;
 }
 
 #planning .planning-container {
+    max-width: 768px;
+    margin: 0 auto;
     align-items: flex-end;
-    padding: 2rem;
 }
 
 #planning .left-column {
     width: 50%;
-    padding: 2rem;
 }
 
 #planning .right-column {
     width: 50%;
-    padding: 2rem;
 }
 
 #planning .left-column img {
@@ -260,7 +253,7 @@ header {
 }
 
 .review {
-    background-color: #9792e4;
+    background-color:var(--bg-purple);
     margin: 1.5rem 0;
 }
 
@@ -275,7 +268,7 @@ header {
 /* regole benefit */
 #benefit {
     padding: 2rem 0;
-    background-color: #9792e4;
+    background-color:var(--bg-purple);
     color: white;
 }
 
@@ -289,7 +282,7 @@ header {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     background-color: white;
-    color: #9792e4;
+    color: var(--color-purple);
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 20px;
@@ -314,7 +307,7 @@ header {
 
 /* regole get started */
 #get-started {
-    background-color: #9792e4;
+    background-color:var(--bg-purple);
     height: 400px;
 }
 
@@ -328,23 +321,28 @@ footer {
 
 /* MEDIA QUERY */
 /* MOBILE TO TABLE */
-@media screen and (min-widht: 480px ) {
+@media screen and (min-width: 480px ) {
     .container {
         max-width: 750px;
     }
 
-    .menu {
+    .menu-desktop {
         display: none;
     }
 }
 
 /* TABLET TO DESKTOP */
-@media screen and (min-widht: 768px ) {
+@media screen and (min-width: 768px ) {
     .container {
         max-width: 1000px;
     }
 
-    .menu {
+    .menu-desktop {
+        display: block;
+    }
+
+    .menu-mobile {
         display: none;
     }
+
 }
