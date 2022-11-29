@@ -131,6 +131,11 @@ body {
     background-color: var(--bg-purple);
     padding: 0.6rem 2.5rem;
 }
+
+.button.purple.linkedin {
+    background-color: var(--bg-purple);
+    padding: 0.6rem 1.2rem;
+}
 /* REGOLE HEADER */
 header {
     width: 100%;
@@ -362,19 +367,48 @@ header {
 
 /* regole about us */
 #about .about-container {
-    padding: 2rem;
+    padding: 3rem 2rem;
 }
 
 .about-container .left-column {
-    width: 80%;
-    height: 300px;
-    border: 1px dashed black;
+    width: 70%;
+    padding: 1.2rem;
 }
 
 .about-container .right-column {
-    width: 20%;
-    height: 300px;
-    border: 1px dashed black;
+    width: 30%;
+    padding: 1.2rem;
+    color: var(--color-purple);
+}
+
+.right-column .about-image img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.about-container .left-column p{
+    padding: 1.5rem 0;
+    line-height: 2rem;
+}
+
+.about-container .left-column h2{
+    font-size: 3rem;
+    color: var(--color-purple);
+}
+
+.about-text p {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+.right-column .about-image {
+    position: relative;
+}
+
+.right-column .about-image i {
+    position: absolute;
+    top: 0;
+    right: 50px;
 }
 
 /* regole get started */
@@ -483,5 +517,24 @@ footer {
     
     .benefit-container .benefit {
         width:100%;
+    }
+
+    /* about */
+    #about .about-container {
+        padding:3rem 0;
+    }
+
+    #about .about-container {
+        flex-wrap: wrap;
+    }
+    
+    .about-container .left-column {
+        width: 100%;
+        padding: 1.2rem 0;
+    }
+    
+    .about-container .right-column {
+        width: 100%;
+        padding: 1.2rem 0;
     }
 }
