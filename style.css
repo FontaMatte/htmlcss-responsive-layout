@@ -284,14 +284,41 @@ header {
 .review {
     background-color:var(--bg-purple);
     margin: 1.5rem 0;
+    border-radius: 30px;
+    color: white;
 }
 
 .review-photo {
     width: 30%;
+    padding: 1.2rem;
+}
+
+.review-text {
+    width: 70%;
+    align-items: center;
+    padding: 1rem;
 }
 
 .review img {
-    width: 100%;
+    width:200px;
+    height: 200px;
+    display: block;
+    border-radius:50%;
+    object-fit: cover;
+}
+
+.review-text p {
+    padding-bottom: 1.5rem;
+}
+
+.testimonials-title > * {
+    margin-bottom: 30px;
+
+}
+
+.testimonials-title h2 {
+    font-size: 2rem;
+    color: var(--color-purple);
 }
 
 /* regole benefit */
@@ -386,6 +413,14 @@ footer {
     #planning .planning-container {
         flex-wrap: wrap;
     }
+
+    .review-photo {
+        width: 100%;
+    }
+    
+    .review-text {
+        width: 100%;
+    }
 }
 
 
@@ -407,5 +442,22 @@ footer {
     
     .cards-container .card .card-big-image {
         justify-content: center;
+    }
+
+    /* testimonials */
+    .review {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .review-photo {
+        width: 100%;
+    }
+    
+    .review-photo img {
+        display: inline-block;
+    }
+    .review-text {
+        width: 100%;
     }
 }
