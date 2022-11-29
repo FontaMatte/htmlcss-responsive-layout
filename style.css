@@ -129,6 +129,7 @@ body {
 
 .button.purple.more {
     background-color: var(--bg-purple);
+    padding: 0.6rem 2.5rem;
 }
 /* REGOLE HEADER */
 header {
@@ -340,8 +341,23 @@ header {
     background-color: white;
     color: var(--color-purple);
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 20px;
+}
+
+#benefit .benefit-container .benefit h2 {
+    font-size: 4rem;
+    padding: 1rem 0;
+}
+
+#benefit h2:first-child {
+    font-size: 2.5rem;
+    padding: 2rem 0;
+}
+
+#benefit .benefit-container .benefit p {
+    color: black;
+    padding: 1.2rem 0;
 }
 
 /* regole about us */
@@ -421,6 +437,10 @@ footer {
     .review-text {
         width: 100%;
     }
+    
+    .benefit-container .benefit {
+        width:calc(50% - 1.5rem);
+    }
 }
 
 
@@ -459,5 +479,9 @@ footer {
     }
     .review-text {
         width: 100%;
+    }
+    
+    .benefit-container .benefit {
+        width:100%;
     }
 }
