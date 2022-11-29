@@ -79,7 +79,7 @@ body {
 }
 
 .ml10 {
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .text-align-center {
@@ -99,15 +99,22 @@ body {
     padding: 0 2rem;
 }
 
+.container-medium {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .container-small {
     max-width: 450px;
     margin: 0 auto;
 }
 
+
+/* REGOLE BOTTONI */
 .button {
     background-color:var(--bg-blue);
     color: white;
-    padding: 6px 20px;
+    padding: 0.6rem 1.2rem;
     border-radius: 20px;
     display: inline-block;
     text-decoration: none;
@@ -134,8 +141,9 @@ body {
 
 .button.purple.linkedin {
     background-color: var(--bg-purple);
-    padding: 0.6rem 1.2rem;
 }
+
+
 /* REGOLE HEADER */
 header {
     width: 100%;
@@ -413,10 +421,38 @@ header {
 
 /* regole get started */
 #get-started {
+    padding: 2rem 0;
     background-color:var(--bg-purple);
-    height: 400px;
+    color:white;
 }
 
+#get-started h3 {
+    font-size: 2.5rem;
+}
+
+#get-started h2 {
+    font-size: 5rem;
+    color: #fdc15f;
+    margin: 1.5rem 0;
+}
+
+#get-started * {
+    /* padding: 1rem 0; */
+}
+
+#get-started p a {
+    color: white;
+}
+
+.button.white.get-started {
+    background-color: white;
+    color: var(--color-purple);
+    padding: 1rem 4rem;
+    border-radius: 30px;
+    margin: 1.5rem 0;
+}
+
+/* regole footer */
 footer {
     background-color:#333333 ;
     height: 200px;
