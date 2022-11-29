@@ -455,7 +455,16 @@ header {
 /* regole footer */
 footer {
     background-color:#333333 ;
-    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    padding: 1.5rem;
+}
+
+footer p a {
+    color: var(--color-purple);
 }
 
 
