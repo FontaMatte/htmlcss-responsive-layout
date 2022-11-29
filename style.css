@@ -74,6 +74,14 @@ body {
     margin-bottom: 50px;
 }
 
+.mr10 {
+    margin-right: 10px;
+}
+
+.ml10 {
+    margin-right: 10px;
+}
+
 .text-align-center {
     text-align: center;
 }
@@ -86,13 +94,14 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
 .container-small {
     max-width: 450px;
+    margin: 0 auto;
 }
 
 .button {
@@ -134,10 +143,6 @@ header {
     justify-content: space-between;
 }
 
-.menu-desktop {
-    display: none;
-}
-
 .menu-desktop nav ul {
     text-decoration: none;
 
@@ -158,8 +163,9 @@ header {
     padding: 0.4rem 0;
 }
 
-.header-container .menu-mobile {
+.menu-mobile {
     color: white;
+    display: none;
 }
 
 /* REGOLE MAIN */
@@ -184,24 +190,39 @@ header {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     border-radius: 20px;
-    padding: 1rem;
 }
 
-#intro .cards-container .card:first-child {
+#intro .cards-container .card.big {
     width: calc(((100% / 3) * 2) - 1.5rem);
     justify-content: center;
 }
 
-#intro .cards-container .card:first-child > * {
+#intro .cards-container .cards-container:first-child > * {
     width: 50%;
 }
 
+.cards-container .card .card-big-image {
+    align-items: flex-end;
+}
+
 .cards-container .card .card-big-image img {
-    width: 60%;
+    width: 70%;
+}
+
+#intro .cards-container .card:not(:first-child) {
+    padding: 1.2rem;
+}
+
+#intro .cards-container .card:not(:first-child) h3 {
+    padding: 1rem 0;
 }
 
 .card .card-big-text {
-    padding: 1rem;
+    padding: 1.2rem;
+}
+
+.card .card-big-text p {
+    padding: 1.5rem 0;
 }
 
 .card  p {
@@ -215,7 +236,7 @@ header {
 }
 
 #planning .planning-container {
-    max-width: 768px;
+    max-width: 750px;
     margin: 0 auto;
     align-items: flex-end;
 }
@@ -320,29 +341,43 @@ footer {
 
 
 /* MEDIA QUERY */
-/* MOBILE TO TABLE */
-@media screen and (min-width: 480px ) {
+/* MEDIUM */
+@media screen and (max-width: 992px ) {
+    
     .container {
         max-width: 750px;
     }
 
-    .menu-desktop {
+    .menu-desktop nav {
         display: none;
-    }
-}
-
-/* TABLET TO DESKTOP */
-@media screen and (min-width: 768px ) {
-    .container {
-        max-width: 1000px;
-    }
-
-    .menu-desktop {
-        display: block;
     }
 
     .menu-mobile {
-        display: none;
+        display: block;
     }
 
+    #intro .cards-container .card.big {
+        flex-wrap: wrap;
+    }
+    
+    #intro .cards-container .cards-container:first-child > * {
+        width: 100%;
+    }
+}
+
+
+/* SMALL */
+@media screen and (max-width: 768px ) {
+    
+    .container {
+        max-width: 600px;
+    }
+
+    #intro .cards-container .card {
+        width:100%
+    }
+
+    #intro .cards-container .card:first-child {
+        width:100%;
+    }
 }
