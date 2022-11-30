@@ -125,15 +125,6 @@ body {
     color: black;
 }
 
-.button.purple.download {
-    background-color:var(--bg-purple);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 0.5rem;
-    color: black;
-}
-
 .button.purple.more {
     background-color: var(--bg-purple);
     padding: 0.6rem 2.5rem;
@@ -249,6 +240,7 @@ header {
 #planning {
     background-color:var(--bg-purple);
     padding: 2rem 0;
+    scroll-margin-top:75px;
 }
 
 #planning .planning-container {
@@ -276,7 +268,7 @@ header {
 }
 
 #planning .right-column img {
-    width: 50%;
+    width: 60%;
 }
 
 .right-column-content {
@@ -286,13 +278,24 @@ header {
 }
 
 .planning-container h3 {
-    padding: 2rem 0;
+    padding: 1.8rem 0;
+}
+
+.arrow.download {
+    background-color:var(--bg-purple);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    display: inline-block;
 }
 
 
 /* regole testimonials */
 #testimonials {
     padding: 2rem 0;
+    scroll-margin-top:75px;
 }
 
 .review {
@@ -340,6 +343,7 @@ header {
     padding: 2rem 0;
     background-color:var(--bg-purple);
     color: white;
+    scroll-margin-top:75px;
 }
 
 #benefit .benefit-container {
@@ -374,6 +378,10 @@ header {
 }
 
 /* regole about us */
+#about {
+    scroll-margin-top:75px;
+}
+
 #about .about-container {
     padding: 3rem 2rem;
 }
@@ -424,6 +432,7 @@ header {
     padding: 2rem 0;
     background-color:var(--bg-purple);
     color:white;
+    scroll-margin-top:75px;
 }
 
 #get-started h3 {
@@ -509,6 +518,7 @@ footer p a {
         flex-wrap: wrap;
     }
 
+    /* testimonials */
     .review-photo {
         width: 100%;
     }
@@ -517,6 +527,7 @@ footer p a {
         width: 100%;
     }
     
+    /* benefit */
     .benefit-container .benefit {
         width:calc(50% - 1.5rem);
     }
@@ -560,6 +571,7 @@ footer p a {
         width: 100%;
     }
     
+    /* benefit */
     .benefit-container .benefit {
         width:100%;
     }
@@ -581,5 +593,9 @@ footer p a {
     .about-container .right-column {
         width: 100%;
         padding: 1.2rem 0;
+    }
+
+    #planning .right-column img {
+        width: 100%;
     }
 }
